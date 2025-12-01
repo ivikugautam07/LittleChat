@@ -31,10 +31,9 @@ const signUp = asyncHandler(async (req: Request, res: Response) => {
       username,
       email,
       password: hashedPassword,
-      avatarUrl: `https://s3bucket.bytenode.xyz/staticbucketstorage/public/images/avatar${
-        // random number between 0 and 40
-        Math.floor(Math.random() * (40 - 1 + 1)) + 1
-      }.avif`,
+      avatarUrl: `https://api.dicebear.com/7.x/fun-emoji/svg?seed=${Math.floor(
+        Math.random() * 100000
+      )}`,
     } as User,
     RoleCode.USER
   );
